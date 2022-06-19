@@ -20,6 +20,7 @@ public class SlideActivity extends AppCompatActivity {
     //侧滑界面的跳转
     private TextImageView mTIVPerson;
     private TextImageView username;
+    private TextImageView settings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class SlideActivity extends AppCompatActivity {
         bmi = (CardView) findViewById(R.id.bmi);
         workout = (CardView) findViewById(R.id.workout);
         slideMenu = (SlideMenu)findViewById(R.id.slideMenu);
+        settings=findViewById(R.id.slide_set);
         video = (CardView) findViewById(R.id.videos);
         username=findViewById((R.id.nickname));
         //点击返回键打开或关闭Menu
@@ -52,6 +54,7 @@ public class SlideActivity extends AppCompatActivity {
         meals.setOnClickListener(onClick);
         video.setOnClickListener(onClick);
         mTIVPerson.setOnClickListener(onClick);
+        settings.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -70,10 +73,13 @@ public class SlideActivity extends AppCompatActivity {
                     intent = new Intent(SlideActivity.this, DailyMeals.class);
                     break;
                 case R.id.videos:
-                    intent = new Intent(SlideActivity.this, Report.class);
+                    intent = new Intent(SlideActivity.this, AddData.class);
                     break;
                 case R.id.slide_person:
                     intent = new Intent(SlideActivity.this,PersonActivity.class);
+                    break;
+                case R.id.slide_set:
+                    intent = new Intent(SlideActivity.this,Settings.class);
                     break;
             }
             startActivity(intent);

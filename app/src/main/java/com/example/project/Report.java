@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class Report extends AppCompatActivity {
@@ -12,12 +13,12 @@ public class Report extends AppCompatActivity {
     //declaring variables
     Button btnBarChart;
     Button btnPieChart;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
-
+        getSupportActionBar().hide();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         btnBarChart = (Button)findViewById(R.id.btnBarChart);
         btnBarChart.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class DailyMeals extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class DailyMeals extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meals);
         getSupportActionBar().hide();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //calling the declared variables
         btnDay1 = (Button)findViewById(R.id.btnD1);
         btnDay2  =(Button)findViewById(R.id.btnD2);

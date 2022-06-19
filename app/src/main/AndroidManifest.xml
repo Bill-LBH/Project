@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".Adddata2"
+            android:exported="false" />
+        <activity
+            android:name=".AddData"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="false" />
+        <activity
             android:name=".PieChartActivity"
             android:exported="false" />
         <activity

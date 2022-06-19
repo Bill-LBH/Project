@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -23,6 +24,7 @@ public class Workout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout);
         getSupportActionBar().hide();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         gif1 = findViewById(R.id.gif1);
         gif2 = findViewById(R.id.gif2);
         gif3 = findViewById(R.id.gif3);
@@ -30,12 +32,12 @@ public class Workout extends AppCompatActivity {
         gif5 = findViewById(R.id.gif5);
         gif6 = findViewById(R.id.gif6);
 //        gif1.setImageResource(getResources().getDrawable(R.drawable.abs));
-        gif1.setImageResource(R.drawable.abs);
-        gif2.setImageResource(R.drawable.lunge);
-        gif3.setImageResource(R.drawable.squat);
-        gif4.setImageResource(R.drawable.streach);
-        gif5.setImageResource(R.drawable.workout);
-        gif6.setImageResource(R.drawable.fitness1);
+        gif1.setImageResource(R.drawable.workout);
+        gif2.setImageResource(R.drawable.fitness1);
+        gif3.setImageResource(R.drawable.abs);
+        gif4.setImageResource(R.drawable.lunge);
+        gif5.setImageResource(R.drawable.squat);
+        gif6.setImageResource(R.drawable.streach);
 
     }
 }

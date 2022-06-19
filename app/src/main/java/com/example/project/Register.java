@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -27,6 +28,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().hide();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         mBtnRegister = findViewById(R.id.btn_register1);
         mTUserName = findViewById(R.id.et_3);
         mTPassword = findViewById(R.id.et_4);
@@ -56,11 +58,6 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = null;
                     intent = new Intent(Register.this, Login.class);
-                intent.putExtra("username",mTUserName.getText().toString().trim());
-                intent.putExtra("password",mTPassword.getText().toString().trim());
-                intent.putExtra("birthday",mTBirthday.getText().toString().trim());
-                intent.putExtra("gender",mTGender.getText().toString().trim());
-                intent.putExtra("phonenumber",mTPhonenumber.getText().toString().trim());
                     startActivity(intent);
                 }
         });
